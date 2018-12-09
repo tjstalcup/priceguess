@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: Comic Sans MS; 
+  }
+
+  
+.itemDescription {
+    float: right;
+    width: 40%;
+    margin: 90px 55px;
+    display: inline-block;
+}
+
+.itemDescription h3{
+    padding: 20px 0px; 
+
+}
+
+p{
+    width: 50%;
+}
