@@ -13,6 +13,7 @@ export class GamePage extends React.Component {
             <Scoreboard 
             timer={10}
             score={0}
+            questions={1}
             />
             <ItemImage 
             itemName= 'Item Name'
@@ -24,9 +25,9 @@ export class GamePage extends React.Component {
                         industry. Lorem Ipsum has been the 
                         industry'
                         />
-            <PriceChoice priceGuess={4.75} />
+            <PriceChoice priceGuess={['5.99', '6.99', '3.99', '4.00']} />
       </div>
-
+ 
     )   
 }
 }

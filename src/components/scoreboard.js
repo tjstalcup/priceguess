@@ -9,4 +9,4 @@ export default function Scoreboard(props){
             <h4 className="score">Score: {props.score} points</h4>
         </div>
     )
-}
+}  
