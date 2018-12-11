@@ -12,8 +12,6 @@ export class GamePage extends React.Component {
         <div className="GamePage">
             <Scoreboard 
             timer={10}
-            score={0}
-            questions={1}
             />
             <ItemImage 
             itemName= 'Item Name'
