@@ -13,6 +13,7 @@ import {connect} from 'react-redux';
   );
 }
 
+//how to map the array down below with different numbers
 const mapStatetoProps = (state) => ({
     itemDescription: state.actualProductHistory[0].itemDescription
 })
