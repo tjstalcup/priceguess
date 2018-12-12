@@ -1,6 +1,6 @@
 const initialState= {   
     score: 100, 
-    question: 1,
+    questions: 1,
     correctGuessCount: 0, 
     incorrectGuessCount: 0, 
     currentPriceOptions: ['4.00', '5.00', '3.00', '2.00'], 

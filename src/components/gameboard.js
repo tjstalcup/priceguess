@@ -23,7 +23,7 @@ export class GamePage extends React.Component {
                         industry. Lorem Ipsum has been the 
                         industry'
                         />
-            <PriceChoice priceGuess={['5.99', '6.99', '3.99', '4.00']} />
+            <PriceChoice />
       </div>
  
     )   

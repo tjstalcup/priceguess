@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import './priceChoice.css' ;
 import {connect} from 'react-redux'; 
 
-export default function PriceChoice(props){
+function PriceChoice(props){
     //need to map over props for each button
-    let choices= props.priceGuess.map((price, index) => (
+    let choices= props.currentPriceOptions.map((price, index) => (
     <button key={index} className='priceChoice'>{price}</button>))
     
     return (
@@ -16,3 +16,9 @@ export default function PriceChoice(props){
         </div>
     )
 }
+
+const mapStatetoProps = state => ({
+    currentPriceOptions: state.currentPriceOptions
+})
+
+export default connect(mapStatetoProps)(PriceChoice)
