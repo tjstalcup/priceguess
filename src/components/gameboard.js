@@ -17,12 +17,7 @@ export class GamePage extends React.Component {
             itemName= 'Item Name'
             image='https://cdn0.iconfinder.com/data/icons/website-kit-2/512/icon_55-512.png'
             />
-            <ItemDescription 
-            description='Lorem Ipsum is simply dummy text 
-                        of the printing and typesetting 
-                        industry. Lorem Ipsum has been the 
-                        industry'
-                        />
+            <ItemDescription />
             <PriceChoice />
       </div>
  
