@@ -19,9 +19,13 @@ ItemImage.defaultprops= {
 
 
 //how to map the array down below with different numbers
+//Maybe make a for loop that handle the index of the actual product History array 
+//As 
+// const indexNum = state.actualProductHistory.length - 1; 
+
 const mapStatetoProps = (state) => ({
-  itemName: state.actualProductHistory[0].itemName, 
-  productPicture: state.actualProductHistory[0].productPicture
+  itemName: state.actualProductHistory[state.actualProductHistory.length - 1].itemName, 
+  productPicture: state.actualProductHistory[state.actualProductHistory.length - 1].productPicture
 
 })
 

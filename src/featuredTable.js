@@ -1,7 +1,9 @@
 import React from 'react'; 
 
+import {connect} from 'react-redux'; 
 
-export default function FeaturedTable(props){
+ 
+function FeaturedTable(props){
     const featuredItems = props.items.map((item, index)=> {
         return(<>
         <tr>
@@ -9,8 +11,8 @@ export default function FeaturedTable(props){
             <th>Price</th>
         </tr>
         <tr>
-            <th>{item.itemName}</th>
-            <th>{item.itemPrice}</th>
+            <th><a href={props.productURL}>{props.itemName}</a></th>
+            <th>{props.itemPrice}</th>
         </tr>
         </>
         )
@@ -28,3 +30,13 @@ export default function FeaturedTable(props){
     )
 
 }
+
+
+const mapStatetoProps = (state) => ({
+    productURL: state.actualProductHistory[state.actualProductHistory.length - 1].productURL,
+    itemName: state.actualProductHistory[state.actualProductHistory.length - 1].itemName,
+    itemPrice: state.actualProductHistory[state.actualProductHistory.length - 1].itemPrice
+
+})
+
+export default connect(mapStatetoProps)(FeaturedTable); 
