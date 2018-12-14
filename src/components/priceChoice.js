@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'; 
 import './priceChoice.css' ;
 import {connect} from 'react-redux'; 
+import { addScore, changeQuestion } from '../actions';
 
 function PriceChoice(props){
     //need to map over props for each button
@@ -13,6 +14,7 @@ function PriceChoice(props){
             <h3>What's The Price?</h3>
                 {choices}
             <Link to='/answerpage'><button type="submit">Make Guess</button></Link>
+            <button onClick={()=> props.dispatch(changeQuestion())}>Dispatch</button>
         </div>
     )
 }

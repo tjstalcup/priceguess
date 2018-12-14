@@ -1,3 +1,6 @@
+import * as actions from '../actions/index'; 
+import { join } from 'path';
+
 const initialState= {   
     score: 100, 
     questions: 1,
@@ -5,14 +8,32 @@ const initialState= {
     incorrectGuessCount: 0, 
     currentPriceOptions: ['4.00', '5.00', '3.00', '2.00'], 
     playerGuesses:[{questionNumber:1, actualPrice: '1.11', guessedPrice: '2.22', correct: false}],
-    actualProductHistory: [
-        {itemName: 'Alienware', productPicture: 'https://img.bbystatic.com/BestBuy_US/images/products/6041/6041204_sa.jpg', itemDescription: 'Windows 10 Home 64-bitNVIDIA GeForce GTX 1060 6GB dedicated graphicsTechnical details: 7th Gen Intel&#174; Core&#8482; i7-7700 processor; 16GB memory; 1TB hard drive + Intel Optane MemorySpecial features: built-in wireless networking; Bluetooth; keyboard'
-, itemPrice: '1399.99', productURL: ''}]
+    actualProductHistory: [{itemName: '', productPicture: 'url', itemDescrtiption: '', itemPrice: ''}]
 }; 
 
 
 export const priceGuessReducer = (state=initialState, action) => {
+     
+    if(action.type === actions.ADD_SCORE){   
+        /* Need to update points to the score if user got the correct answer and then update the store*/
+        
+        return Object.assign({}, state, {
+            score: state.score + action.score
+        })
+    }
+    else if(action.type === actions.CHANGE_QUESTION)
+        /* Need to add points to the score if user got the correct answer and then update the store*/
 
+        return Object.assign({}, state, {
+            questions: state.questions + 1
+        })
+    
+    {
+        
+        return Object.assign({},state=initialState, {
+            question: action.question
+        })
+    }
     return state; 
 }
     
