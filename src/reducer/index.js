@@ -34,7 +34,15 @@ export const priceGuessReducer = (state=initialState, action) => {
             question: action.question
         })
     }
-    return state; 
+    // else if (action.type === actions.FETCH_ITEM_INFO_SUCCESS)
+
+    //     return Object.assign({}, state, {
+    //         actualProductHistory: [
+    //         ]
+
+        
+    // })
+        return state; 
 }
     
 
