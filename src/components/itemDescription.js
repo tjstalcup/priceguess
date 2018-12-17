@@ -4,6 +4,8 @@ import './itemDescription.css';
 
 import {connect} from 'react-redux'; 
 
+
+
  function ItemDescription(props) {
   return (
     <div className="itemDescription">

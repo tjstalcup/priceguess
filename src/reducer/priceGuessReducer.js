@@ -4,6 +4,8 @@ import { join } from 'path';
 const initialState= {   
     score: 100, 
     questions: 1,
+    loading: false, 
+    error: null, 
     correctGuessCount: 0, 
     incorrectGuessCount: 0, 
     currentPriceOptions: ['4.00', '5.00', '3.00', '2.00'], 
@@ -34,15 +36,18 @@ export const priceGuessReducer = (state=initialState, action) => {
             question: action.question
         })
     }
-    // else if (action.type === actions.FETCH_ITEM_INFO_SUCCESS)
 
-    //     return Object.assign({}, state, {
-    //         actualProductHistory: [
-    //         ]
+    // else if(action.type === actions.FETCH_ITEM_INFO_SUCCESS)
+    // /* Need to add points to the score if user got the correct answer and then update the store*/
 
-        
+    // return Object.assign({}, state, {
+    //     actualProductHistory: action.actualProductHistory
     // })
-        return state; 
+
+
+
+    //set state when item is loading on the page for fetch
+    return state; 
 }
     
 

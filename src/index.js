@@ -16,7 +16,7 @@ ReactDOM.render(
     <div>
        <Provider store={store}> 
             <Route exact path='/' component={App}/>
-            <Route path='/gamepage'component={GamePage}/>
+            <Route path='/gamepage'component={GamePage}  />
             <Route path='/answerpage'component={AnswerPage}/>
             <Route path='/feedback'component={Feedback}/>
             <Route path='/featureditems'component={FeaturedItems}/>
