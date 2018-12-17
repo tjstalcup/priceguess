@@ -33,6 +33,6 @@ export const fetchItemInfo = () => dispatch => {
             return Promise.reject(res.statusText);
         }
          return res.json();
-    }).then(actualPriceHistory => {dispatch(fetchItemInfoSuccess(actualPriceHistory)).catch(fetchItemInfoError(error));}
+    }).then(actualPriceHistory => {dispatch(fetchItemInfoSuccess(actualPriceHistory)).catch(error => fetchItemInfoError(error));}
     )
 }

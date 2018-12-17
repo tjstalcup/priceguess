@@ -6,23 +6,29 @@ import ItemDescription from './itemDescription';
 import Scoreboard from './scoreboard';
 import PriceChoice from './priceChoice';
 import {fetchItemInfo} from '../actions/index';
-import { fetchItemInfoRequest } from '../actions/bestBuyAction';
+import { fetchItemInfoRequest, fetchItemInfoSuccess } from '../actions/bestBuyAction';
 
 
 export class GamePage extends React.Component {
-    //Make constructor for the dispatch
+    constructor(props){
+        super(props)
+    }
+    // Make constructor for the dispatch
      componentDidMount(){
+         console.log(this.props.dispatch)
+         this.props.dispatch(fetchItemInfoRequest())
      }
     
     render() {
     return(
         <div className="GamePage">
-            <Scoreboard 
+            <h1>GameBoard JS</h1>
+           {/*  <Scoreboard 
             timer={10}
             />
             <ItemImage />
             <ItemDescription />
-            <PriceChoice />
+            <PriceChoice /> */}
       </div>
  
     )   
@@ -32,8 +38,13 @@ export class GamePage extends React.Component {
 
 //Finish setting up dispatch for the class
 
-const mapStatetoProps = (state) => ({
-    itemDescription: state.actualProductHistory[state.actualProductHistory.length - 1].itemDescription
-})
+const mapStatetoProps = (state) => 
+{ console.log(state)
+    return state;
+    // ({
+    //     itemDescription: state.bestBuyCall.actualProductHistory[state.bestBuyCall.actualProductHistory.length - 1].itemDescription
+    // })
+    
+}
 
 export default connect(mapStatetoProps)(GamePage); 

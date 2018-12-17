@@ -27,7 +27,6 @@ export const bestBuyCallReducer = (state=initialState, action) => {
             error: action.error, 
             loading: false 
     })
-    
-        return state;
     }
+    return state;
 }
