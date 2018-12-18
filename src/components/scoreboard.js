@@ -14,8 +14,8 @@ import {connect} from 'react-redux';
 }  
 
 const mapStatetoProps = state => ({
-    score: state.score,
-    questions: state.questions
+    score: state.priceGuess.score,
+    questions: state.priceGuess.questions
 })
 
 export default connect(mapStatetoProps)(Scoreboard)

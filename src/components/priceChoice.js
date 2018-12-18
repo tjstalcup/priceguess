@@ -20,7 +20,7 @@ function PriceChoice(props){
 }
 
 const mapStatetoProps = state => ({
-    currentPriceOptions: state.currentPriceOptions
+    currentPriceOptions: state.priceGuess.currentPriceOptions
 })
 
 export default connect(mapStatetoProps)(PriceChoice)

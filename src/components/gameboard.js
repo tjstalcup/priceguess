@@ -22,12 +22,12 @@ export class GamePage extends React.Component {
     return(
         <div className="GamePage">
             <h1>GameBoard JS</h1>
-           {/*  <Scoreboard 
+            <Scoreboard 
             timer={10}
             />
-            <ItemImage />
-            <ItemDescription />
-            <PriceChoice /> */}
+{/*             <ItemImage />
+ */}            <ItemDescription />
+           {/*  <PriceChoice /> */} 
       </div>
  
     )   
