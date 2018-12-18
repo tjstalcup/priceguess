@@ -6,7 +6,7 @@ import store from './store';
 import {Provider} from 'react-redux'; 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { GamePage } from './components/gameboard';
+import  GamePage from './components/gameboard';
 import AnswerPage from './components/answerPage';
 import Feedback from './components/feedback';
 import FeaturedItems from './featuredItems';

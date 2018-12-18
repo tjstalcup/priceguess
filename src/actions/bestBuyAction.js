@@ -19,7 +19,7 @@ export const fetchItemInfoError = error => ({
 
 export const fetchItemInfo = () => dispatch => {
     const categories = [
-    'Desktop & All-in-One Computer','Digital Cameras ','Health, Fitness & Beauty','Headphones','Home Audio','Home Automation & Security']
+    'Digital Cameras ','Health, Fitness & Beauty','Headphones','Home Audio','Home Automation & Security']
      
      const categoryName = categories[Math.floor(Math.random()*categories.length)]; 
      
@@ -28,7 +28,14 @@ export const fetchItemInfo = () => dispatch => {
 
     dispatch(fetchItemInfoRequest());
     //Split up API call properly in fetch
-    fetch(`${API_BASE_URL}/(categoryPath.name=${categoryName}*)?apiKey=A3fUqjrVIUbZWiJcDlQcel89&sort=name.asc&show=name,image,regularPrice,url&pageSize=5&page=${page}&format=json`).then(res => {
+    fetch('https://api.bestbuy.com/v1/products(categoryPath.name=Headphones*)?apiKey=A3fUqjrVIUbZWiJcDlQcel89&sort=name.asc&show=name,image,regularPrice,url&pageSize=5&page=5&format=json', {
+      method: 'GET', 
+      mode: "cors",
+      headers: {
+        "access-control-allow-origin" : "*",
+        "Content-type": "application/json; charset=UTF-8"
+      }  
+    }).then(res => {
         if(!res.ok) {
             return Promise.reject(res.statusText);
         }

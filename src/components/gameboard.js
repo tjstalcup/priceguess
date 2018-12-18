@@ -5,7 +5,7 @@ import ItemImage from './itemImage';
 import ItemDescription from './itemDescription';
 import Scoreboard from './scoreboard';
 import PriceChoice from './priceChoice';
-import {fetchItemInfo} from '../actions/index';
+import {fetchItemInfo} from '../actions/bestBuyAction';
 import { fetchItemInfoRequest, fetchItemInfoSuccess } from '../actions/bestBuyAction';
 
 
@@ -15,8 +15,7 @@ export class GamePage extends React.Component {
     }
     // Make constructor for the dispatch
      componentDidMount(){
-         console.log(this.props.dispatch)
-         this.props.dispatch(fetchItemInfoRequest())
+         this.props.dispatch(fetchItemInfo())
      }
     
     render() {
