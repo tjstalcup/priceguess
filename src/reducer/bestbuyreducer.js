@@ -3,9 +3,20 @@ import * as actions from '../actions/bestBuyAction'
 const initialState={
     loading: false, 
     error: null, 
-    actualProductHistory: []
-}; 
+    currentProduct: [{
+        products: [{
+            name: 'name',
+            image: 'https://img.bbystatic.com/BestBuy_US/images/products/6043/6043422_sa.jpg', 
+            regularPrice: '.99'
+        }]
+    }
+    ] 
+    
 
+}; 
+/* 
+    currentProduct.products
+*/
 
 export const bestBuyCallReducer = (state=initialState, action) => {
     if(action.type === actions.FETCH_ITEM_INFO_REQUEST) {
@@ -16,7 +27,7 @@ export const bestBuyCallReducer = (state=initialState, action) => {
     }
     else if(action.type === actions.FETCH_ITEM_INFO_SUCCESS){
         return Object.assign({}, state, {
-            actualProductHistory:  action.actualProductHistory,
+            currentProduct:  action.currentProduct,
             loading: false,
             error: null
         })

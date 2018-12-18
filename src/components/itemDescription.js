@@ -15,7 +15,7 @@ import {connect} from 'react-redux';
 
 //how to map the array down below with different numbers
 const mapStatetoProps = (state) => ({
-    itemDescription: state.actualProductHistory[state.actualProductHistory.length - 1].itemDescription
+    itemDescription: state.currentProduct[state.currentProduct.length - 1].itemDescription
 })
 
 export default connect(mapStatetoProps)(ItemDescription); 

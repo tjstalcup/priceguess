@@ -33,9 +33,9 @@ function FeaturedTable(props){
 
 
 const mapStatetoProps = (state) => ({
-    productURL: state.actualProductHistory[state.actualProductHistory.length - 1].productURL,
-    itemName: state.actualProductHistory[state.actualProductHistory.length - 1].itemName,
-    itemPrice: state.actualProductHistory[state.actualProductHistory.length - 1].itemPrice
+    productURL: state.currentProduct[state.currentProduct.length - 1].productURL,
+    itemName: state.currentProduct[state.currentProduct.length - 1].itemName,
+    itemPrice: state.currentProduct[state.currentProduct.length - 1].itemPrice
 
 })
 

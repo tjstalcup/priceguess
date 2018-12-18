@@ -17,7 +17,7 @@ const initialState = {
         guessedPrice: '2.22',
         correct: false
     }],
-    actualProductHistory: [{
+    currentProduct: [{
         itemName: '',
         productPicture: 'url',
         itemDescrtiption: '',
@@ -56,5 +56,5 @@ export const priceGuessReducer = (state = initialState, action) => {
 //     question: 1,
 //     currentPriceOptions: [],
 //     playerGuesses: [{questionNumber: 1, actualPrice: '1.11', guessedPrice: '2.22', correct: false, }],
-//     actualProductHistory: [{itemName:'',productPicture:'url',itemDescription:''}],
+//     currentProduct: [{itemName:'',productPicture:'url',itemDescription:''}],
 // }

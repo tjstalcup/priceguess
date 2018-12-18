@@ -7,9 +7,9 @@ export const fetchItemInfoRequest = () => ({
 })
 
 export const FETCH_ITEM_INFO_SUCCESS = 'FETCH_ITEM_INFO_SUCCESS';
-export const fetchItemInfoSuccess = actualProductHistory => ({
+export const fetchItemInfoSuccess = currentProduct => ({
     type: FETCH_ITEM_INFO_SUCCESS,
-    actualProductHistory
+    currentProduct
 })
 
 export const FETCH_ITEM_INFO_ERROR = 'FETCH_ITEM_INFO_ERROR';

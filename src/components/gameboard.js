@@ -19,12 +19,12 @@ export class GamePage extends React.Component {
     }
 
     render() {
-        if (this.props.loading === true){
+        if (this.props.loading === true) {
             return <h1>LOADING</h1>
         }
-            
-        
-        
+
+
+
         {/* 
             1. If loading or error state of the bestBuyCall is true, 
             then render don't render the ItemDescription or PriceChoice
@@ -42,8 +42,8 @@ export class GamePage extends React.Component {
                 <Scoreboard
                     timer={10}
                 />
-                {/*             <ItemImage />
- */}            {/* <ItemDescription /> */}
+                <ItemImage />
+                {/* <ItemDescription /> */}
                 {/*  <PriceChoice /> */}
             </div>
 
@@ -58,10 +58,10 @@ const mapStatetoProps = (state) => {
     console.log(state)
     return ({
         loading: state.bestBuyCall.loading
-        
+
     })
     // ({
-    //     itemDescription: state.bestBuyCall.actualProductHistory[state.bestBuyCall.actualProductHistory.length - 1].itemDescription
+    //     itemDescription: state.bestBuyCall.currentProduct[state.bestBuyCall.currentProduct.length - 1].itemDescription
     // })
 
 }
