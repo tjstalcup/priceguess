@@ -5,12 +5,18 @@ import "./itemImage.css";
 import {connect} from 'react-redux';
 
  function ItemImage(props) {
-  return (
-    <div className="itemImage">
-      {/* <h4>{props.currentProduct[0].products[0].name}</h4> */}
-      <img className="image" src={props.productPicture} alt="itemImage" />
-    </div>
-  );
+   console.log(props);
+  if(props.data.currentProduct[0].products.length) {
+    return ( <div className="itemImage">
+    <h4>{props.data.currentProduct[0].products[0].name}</h4>
+    <img className="image" src={props.productPicture} alt="itemImage" />
+  </div>
+    )
+  }
+   else {
+     return (<p> No Data Found </p>)
+   }
+  ;
 }
 ItemImage.defaultprops= {
   itemName: "Item Name",
@@ -24,16 +30,19 @@ ItemImage.defaultprops= {
 // const indexNum = state.currentProduct.length - 1; 
 
 const mapStatetoProps = (state) => {
-  let data = [];
+  let data = {
+    currentProduct: [{
+      products: []
+    }]
+  };
 
-  if(state.bestBuyCall) {
+  if(state.bestBuyCall.currentProduct) {
     data = state.bestBuyCall
-    console.log(data); 
   }
   
-  return {
+  return ({
     data
-  }
+  })
 
 }
 

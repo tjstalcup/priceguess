@@ -55,7 +55,6 @@ export class GamePage extends React.Component {
 //Finish setting up dispatch for the class
 
 const mapStatetoProps = (state) => {
-    console.log(state)
     return ({
         loading: state.bestBuyCall.loading
 
