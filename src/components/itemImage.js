@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
  function ItemImage(props) {
   return (
     <div className="itemImage">
-      <h4>{props.itemName}</h4>
+      {/* <h4>{props.currentProduct[0].products[0].name}</h4> */}
       <img className="image" src={props.productPicture} alt="itemImage" />
     </div>
   );
@@ -23,10 +23,18 @@ ItemImage.defaultprops= {
 //As 
 // const indexNum = state.currentProduct.length - 1; 
 
-const mapStatetoProps = (state) => ({
-  itemName: state.bestBuyCall.currentProduct[0].products[0].name, 
-  productPicture: state.bestBuyCall.currentProduct[0].products[0].picture
+const mapStatetoProps = (state) => {
+  let data = [];
 
-})
+  if(state.bestBuyCall) {
+    data = state.bestBuyCall
+    console.log(data); 
+  }
+  
+  return {
+    data
+  }
+
+}
 
 export default connect(mapStatetoProps)(ItemImage);
